@@ -1,0 +1,110 @@
+
+:root {
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+    margin: 0;
+}
+
+
+body {
+    background-color: hsl(275, 100%, 97%);
+}
+
+
+.container {
+    width: 100%;
+    background-image: url('../assets/images/background-pattern-mobile.svg');
+    background-repeat: no-repeat;
+}
+
+
+.main-section {
+    background-color: #fff;
+    width: 80%;
+    padding: 1rem;
+    border-radius: 5px;
+
+    position: relative;
+    left: 10%;
+    top: 8em;
+}
+
+@media (min-width: 375px) {
+    .container {
+        background-image: url('../assets/images/background-pattern-desktop.svg');
+        background-repeat: no-repeat;
+    }
+
+    .main-section {
+        width: 40%;
+        left: 30%;
+    }
+}
+
+.main-section > div {
+    margin: 1em 0;
+}
+
+.header {
+    display: flex;
+    color: hsl(292, 42%, 14%);
+}
+
+.header h1 {
+    margin-left: 1em;
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 1.2rem;
+    color: hsl(292, 42%, 14%);
+    font-weight: 600;
+    width: 70%;
+}
+
+
+.open-btn {
+    background-image: url('../assets/images/icon-plus.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 2.5em;
+    height: 2.5em;
+    border: none;
+    background-color: #fff;
+}
+
+.open-btn.open {
+    background-image: url('../assets/images/icon-minus.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 2.5em;
+    height: 2.5em;
+    border: none;
+    background-color: #fff;
+}
+
+.answer {
+    display: none; /* Initially hide the element */
+    padding-top: .75em;
+    transform: scaleY(0); /* Initial scale */
+    transform-origin: top;
+    transition-property: transform; /* Add opacity to the transition property */
+    transition-duration: 5s;
+    /* opacity: 0; */
+}
+
+.answer.display {
+    display: block;
+    transform: scaleY(1);
+    /* opacity: 1; Show the element */
+}
+
+
+
